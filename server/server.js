@@ -21,6 +21,10 @@ app.get("/", (req, res) => {
   return res.status(200).sendFile(path.join(__dirname, "../index.html"));
 });
 
+/*
+   User Routes Below
+*/
+
 app.post("/createUser", userController.createUser, (req, res) => {
   return res.status(201).send('User Successfully Created');
 });
@@ -29,6 +33,10 @@ app.post("/verifyUser", userController.verifyUser, (req, res) => {
   return res.status(201).json(res.locals.user);
 });
 
+/*
+   Trip Routes Below
+*/
+
 app.post("/getTrips", tripController.getTrips, (req, res) => {
   return res.json(res.locals.trips);
 })
@@ -36,6 +44,10 @@ app.post("/getTrips", tripController.getTrips, (req, res) => {
 app.post("/newTrip", tripController.createTrip, tripController.getTrips, (req, res) => {
   return res.json(res.locals.trips);
 });
+
+/*
+   Location Routes Below
+*/
 
 app.post("/getLocations", locationController.getLocations, (req, res) => {
   res.json(res.locals.locations);
