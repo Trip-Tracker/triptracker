@@ -21,6 +21,7 @@
   "author": "Wesley, Jorge, Dom",
   "license": "ISC",
   "dependencies": {
+    "@material-ui/core": "^4.12.3",
     "concurrently": "^6.2.1",
     "cross-env": "^7.0.3",
     "express": "^4.17.1",
