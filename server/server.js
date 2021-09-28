@@ -29,12 +29,12 @@ app.post("/verifyUser", userController.verifyUser, (req, res) => {
 });
 
 app.post("/getTrips", tripController.getTrips, (req, res) => {
-  res.json(res.locals.trips);
+  return res.json(res.locals.trips);
 })
 
-// app.post("/newTrip", tripController.createTrip, (req, res) => {
-//   return res.status(201)
-// });
+app.post("/newTrip", tripController.createTrip, tripController.getTrips, (req, res) => {
+  return res.json(res.locals.trips);
+});
 
 
 
