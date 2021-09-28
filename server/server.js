@@ -3,7 +3,8 @@ const { restart } = require("nodemon");
 const app = express();
 const path = require("path");
 const userController = require("./controllers/userControllers");
-const tripController = require("./controllers/tripController")
+const tripController = require("./controllers/tripController");
+const locationController = require("./controllers/locationController");
 
 
 
@@ -35,6 +36,10 @@ app.post("/getTrips", tripController.getTrips, (req, res) => {
 app.post("/newTrip", tripController.createTrip, tripController.getTrips, (req, res) => {
   return res.json(res.locals.trips);
 });
+
+app.post("/getLocations", locationController.getLocations, (req, res) => {
+  res.json(res.locals.locations);
+})
 
 
 

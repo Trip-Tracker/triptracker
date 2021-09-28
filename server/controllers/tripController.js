@@ -4,7 +4,7 @@ const db = require(path.resolve(__dirname, "../../database/pool.js"));
 const tripController = {};
 
 tripController.getTrips = async (req, res, next) => {
-  console.log('in get trips', req.body)
+
   const queryString = 
     `SELECT * FROM trips
      WHERE user_id = $1`
@@ -18,7 +18,7 @@ tripController.getTrips = async (req, res, next) => {
     res.locals.trips = queryRes.rows;
     return next();
   });
-}
+};
 
 tripController.createTrip = async (req, res, next) => {
 
@@ -34,14 +34,7 @@ tripController.createTrip = async (req, res, next) => {
     console.log("Trip Successfully created");
     return next();
   });
-
-}
-
-
-
-
-
-
+};
 
 
 
