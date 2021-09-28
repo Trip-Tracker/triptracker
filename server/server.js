@@ -21,11 +21,11 @@ app.get("/", (req, res) => {
 
 app.post("/createUser", userController.createUser, (req, res) => {
   return res.status(201).send('User Successfully Created');
-})
+});
 
 app.post("/verifyUser", userController.verifyUser, (req, res) => {
   return res.status(201).json(res.locals.user);
-})
+});
 
 
 
