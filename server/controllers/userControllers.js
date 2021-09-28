@@ -15,11 +15,13 @@ userController.createUser = async (req, res, next) => {
   console.log(req.body)
 
   await db.query(queryString, entry, (err, res) => {
-    if (err) return next('Error in Create User Middleware');
+    if (err) return next({message: 'Error in Create User Middleware'});
     console.log(res);
     return next()
   })
 };
 
-userController.verifyUser = (req, res, next) => {};
+userController.verifyUser = (req, res, next) => {
+  
+};
 module.exports = userController;
