@@ -9,7 +9,7 @@ tripController.getTrips = async (req, res, next) => {
     `SELECT * FROM trips
      WHERE user_id = $1`
 
-  const { userID } = req.body;
+  const userID = req.body.userID || res.locals.user._id
   const entry = [userID];
 
   await db.query(queryString, entry, (err, queryRes) => {
