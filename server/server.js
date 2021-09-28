@@ -41,6 +41,9 @@ app.post("/getLocations", locationController.getLocations, (req, res) => {
   res.json(res.locals.locations);
 })
 
+app.post("/newLocation", locationController.newLocation, locationController.getLocations, (req, res) => {
+  res.json(res.locals.locations);
+})
 
 
 
