@@ -3,6 +3,7 @@ const { restart } = require("nodemon");
 const app = express();
 const path = require("path");
 const userController = require("./controllers/userControllers");
+const tripController = require("./controllers/tripController")
 
 
 
@@ -27,6 +28,13 @@ app.post("/verifyUser", userController.verifyUser, (req, res) => {
   return res.status(201).json(res.locals.user);
 });
 
+app.post("/getTrips", tripController.getTrips, (req, res) => {
+  res.json(res.locals.trips);
+})
+
+// app.post("/newTrip", tripController.createTrip, (req, res) => {
+//   return res.status(201)
+// });
 
 
 
