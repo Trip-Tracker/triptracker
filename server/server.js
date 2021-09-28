@@ -1,4 +1,5 @@
 const express = require("express");
+const { restart } = require("nodemon");
 const app = express();
 const path = require("path");
 const userController = require("./controllers/userControllers");
@@ -18,7 +19,9 @@ app.get("/", (req, res) => {
   return res.status(200).sendFile(path.join(__dirname, "../index.html"));
 });
 
-
+app.post("/createUser", userController.createUser, (req, res) => {
+  return res.status(201).send('User Successfully Created');
+})
 
 
 
