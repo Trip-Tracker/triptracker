@@ -1,7 +1,10 @@
 const express = require("express");
+const { restart } = require("nodemon");
 const app = express();
 const path = require("path");
 const userController = require("./controllers/userControllers");
+const tripController = require("./controllers/tripController");
+const locationController = require("./controllers/locationController");
 
 
 
@@ -18,10 +21,41 @@ app.get("/", (req, res) => {
   return res.status(200).sendFile(path.join(__dirname, "../index.html"));
 });
 
+/*
+   User Routes Below
+*/
 
+app.post("/createUser", userController.createUser, (req, res) => {
+  return res.status(201).send('User Successfully Created');
+});
 
+app.post("/verifyUser", userController.verifyUser, (req, res) => {
+  return res.status(201).json(res.locals.user);
+});
 
+/*
+   Trip Routes Below
+*/
 
+app.post("/getTrips", tripController.getTrips, (req, res) => {
+  return res.json(res.locals.trips);
+})
+
+app.post("/newTrip", tripController.createTrip, tripController.getTrips, (req, res) => {
+  return res.json(res.locals.trips);
+});
+
+/*
+   Location Routes Below
+*/
+
+app.post("/getLocations", locationController.getLocations, (req, res) => {
+  res.json(res.locals.locations);
+});
+
+app.post("/newLocation", locationController.newLocation, locationController.getLocations, (req, res) => {
+  res.json(res.locals.locations);
+});
 
 
 
