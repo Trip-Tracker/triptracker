@@ -10,4 +10,4 @@ module.exports = {
     console.log("db pool executed query ->", text);
     return pool.query(text, params, callback);
   },
-};
+}
