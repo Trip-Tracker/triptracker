@@ -29,8 +29,8 @@ app.post("/createUser", userController.createUser, (req, res) => {
   return res.status(201).send('User Successfully Created');
 });
 
-app.post("/verifyUser", userController.verifyUser, (req, res) => {
-  return res.status(201).json(res.locals.user);
+app.post("/verifyUser", userController.verifyUser, tripController.getTrips, (req, res) => {
+  return res.status(201).json({user: res.locals.user, trips: res.locals.trips});
 });
 
 /*

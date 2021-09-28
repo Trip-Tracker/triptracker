@@ -6,3 +6,19 @@ export const addCount = () => {
     payload: 1,
   };
 };
+
+
+export const updateUsernameEntryAction = (entry) => {
+  return {
+    type: types.UPDATE_USERNAME_ENTRY,
+    payload: entry,
+  };
+};
+
+
+export const updatePasswordEntryAction = (entry) => {
+  return {
+    type: types.UPDATE_PASSWORD_ENTRY,
+    payload: entry,
+  };
+};
