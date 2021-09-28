@@ -1,6 +1,7 @@
 import React, { Component } from "react";
 import SimpleMap from "./Map.jsx";
 import Test from "./Test.jsx";
+import Navigation from "./Navigation.jsx";
 
 function App() {
   return (
