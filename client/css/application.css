@@ -51,3 +51,12 @@ html {
   text-align: center;
   margin-left: 125px;
 }
+
+.buttonContainer {
+  margin: 5px;
+  min-width: 200px;
+}
+.tripText {
+  font-size: 30px;
+  margin: 5px;
+}
