@@ -29,3 +29,19 @@ export const updateTrip = (entry) => {
     payload: entry,
   };
 };
+
+//switches application to "CREATING TRIP" page
+export const createTrip = () => {
+  return {
+    type: types.CREATE_TRIP,
+    payload: '_newtrip_'
+  }
+}
+
+//fetches the new trip to add to the tripsArray
+export const fetchNewTrip = (entry) => {
+  return {
+    type: types.FETCH_NEW_TRIP,
+    payload: entry,
+  }
+}
