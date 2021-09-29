@@ -12,12 +12,12 @@ const useStyles = makeStyles({
 function MakeTrip(){
     const classes = useStyles();
 
-return(
-<div className="graycard">
-<h1> Rendered Make Trip </h1> 
-<Button variant="contained" className={classes.btn}>Save Trip</Button>
-</div>
-)
+return (
+  <div className="graycard">
+  <h1> Rendered Make Trip </h1> 
+  <Button variant="contained" className={classes.btn}>Save Trip</Button>
+  </div>
+  );
 }
 
-export default MakeTrip
+export default MakeTrip;
