@@ -14,7 +14,10 @@ tripController.getTrips = async (req, res, next) => {
 
   await db.query(queryString, entry, (err, queryRes) => {
     if (err) return next({message: "Error In Trips Query"});
-    if (!queryRes.rows.length) return next({message: "No Trips Found"});
+    if (!queryRes.rows.length){
+      res.locals.trips = [];
+      return next();
+    }
     res.locals.trips = queryRes.rows;
     return next();
   });

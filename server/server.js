@@ -38,7 +38,7 @@ app.post("/verifyUser", userController.verifyUser, tripController.getTrips, (req
 */
 
 app.post("/getTrips", tripController.getTrips, (req, res) => {
-  return res.json(res.locals.trips);
+  return res.status(200).json(res.locals.trips);
 })
 
 app.post("/newTrip", tripController.createTrip, tripController.getTrips, (req, res) => {
