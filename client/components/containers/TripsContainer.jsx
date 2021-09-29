@@ -55,7 +55,7 @@ function TripsContainer(props) {
       {/* <div className="mapContainer">
         <SimpleMap />
       </div> */}
-      <h1>Welcome {props.userEmail}</h1>
+      <h1>Welcome, {props.userEmail}!</h1>
       <h2> Trips </h2>
     
       <div className='tripsContainer'>

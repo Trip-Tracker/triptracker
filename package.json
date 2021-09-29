@@ -6,7 +6,9 @@
   "scripts": {
     "start": "NODE_ENV=production node server/server.js",
     "build": "NODE_ENV=production webpack",
-    "dev": "cross-env NODE_ENV=development concurrently \"webpack serve --open\" \" nodemon server/server.js\" "
+    "dev": "cross-env NODE_ENV=development concurrently \"webpack serve --open\" \" nodemon server/server.js\" ",
+    "test:server": "jest supertest.js",
+    "test:react": "jest enzyme.js"
   },
   "nodemonConfig": {
     "ignore": [
@@ -44,8 +46,10 @@
     "@babel/core": "^7.15.0",
     "@babel/preset-env": "^7.15.0",
     "@babel/preset-react": "^7.14.5",
+    "@wojtekmaj/enzyme-adapter-react-17": "^0.6.3",
     "babel-loader": "^8.2.2",
     "css-loader": "^6.2.0",
+    "enzyme": "^3.11.0",
     "nodemon": "^2.0.12",
     "style-loader": "^3.2.1",
     "webpack": "^5.50.0",
