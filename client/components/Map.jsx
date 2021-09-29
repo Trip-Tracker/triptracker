@@ -1,17 +1,12 @@
 import React, { Component } from "react";
 import GoogleMapReact from "google-map-react";
+import Flag from '@material-ui/icons/Flag';
 
 const AnyReactComponent = ({ text }) => <div>{text}</div>;
 
 
 class SimpleMap extends Component {
-  // static defaultProps = {
-  //   center: {
-  //     lat: 59.95,
-  //     lng: 30.33,
-  //   },
-  //   zoom: 11,
-  // };
+
   constructor(props){
     super(props);
     this.state = {
@@ -53,6 +48,9 @@ class SimpleMap extends Component {
           center={this.state.center}
           defaultZoom={this.state.zoom}
         >
+          <Flag
+          lat={this.state.center.lat}
+          >Can text go here? </Flag>
         </GoogleMapReact>
       </div>
     );
