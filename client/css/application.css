@@ -36,6 +36,8 @@ html {
   max-height: 100vh;
 }
 .tripsContainer {
+  padding: 1em 1em;
+
   display: flex;
   flex-direction: column;
   max-height: 55vh;
@@ -56,7 +58,23 @@ html {
   margin: 5px;
   min-width: 200px;
 }
+
 .tripText {
   font-size: 30px;
   margin: 5px;
+}
+
+.space {
+  /* padding-bottom: 10px;
+  margin-bottom: 10px; */
+  width: 100%;
+  margin-bottom: 10px;
+}
+
+#welcomeblack {
+  color:black;
+}
+
+#welcomered {
+  color:red;
 }
