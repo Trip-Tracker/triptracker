@@ -57,6 +57,7 @@ const mainReducer = (state = initialState, action) => {
       return {
         ...state,
         tripsArray: action.payload,
+        currentTrip: null,
       }
 
     default:
