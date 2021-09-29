@@ -38,7 +38,7 @@ function IndividualTrip(props) {
         className={classes.btn}
       >
        
-        Edit Trip
+        Add Location
       </Button>
       </div>
       <div className='buttonContainer'>

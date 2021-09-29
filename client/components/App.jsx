@@ -22,7 +22,7 @@ function App(props) {
   
   if (!props.isSignedIn){
     return (
-      <div>
+      <div id="appContainer">
         <Navigation page='Login'/>     
         <SignIn/>       
       </div>

@@ -42,9 +42,8 @@ function Navigation(props) {
     <div className={classes.root}>
       <TTNavBar>
           <Toolbar>
-            <IconButton edge="start" className={classes.menuButton} color="inherit" aria-label="menu">
-              <MenuIcon />
-            </IconButton>
+            {/* <IconButton edge="start" className={classes.menuButton} color="inherit" aria-label="menu">
+            </IconButton> */}
             <Typography variant="h6" className={classes.title} color="inherit" onClick={props.setCurrentTripToNull}>
               TripTracker
             </Typography>

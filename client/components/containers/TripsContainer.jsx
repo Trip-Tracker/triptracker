@@ -55,8 +55,8 @@ function TripsContainer(props) {
       {/* <div className="mapContainer">
         <SimpleMap />
       </div> */}
-      <h1>Welcome, {props.userEmail}!</h1>
-      <h2> Trips </h2>
+      <div id="welcomemessage"><h2><span id="welcomeblack">Welcome,</span> <span id="welcomered">{props.userEmail}</span><span id="welcomeblack">!</span></h2></div>
+      <h3> Trips </h3>
     
       <div className='tripsContainer'>
         {tripsToRender}

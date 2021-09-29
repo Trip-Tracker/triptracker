@@ -54,6 +54,7 @@ function MakeTrip(props) {
 
   return (
     <div className="graycard">
+      <div className="space">
       <TextField
         id="newlocation"
         fullWidth
@@ -62,6 +63,8 @@ function MakeTrip(props) {
         size="small"
         variant="outlined"
       />
+      </div>
+      <div className="space">
       <TextField
         id="newdate"
         fullWidth
@@ -70,6 +73,7 @@ function MakeTrip(props) {
         size="small"
         variant="outlined"
       />
+      </div>
       <Button
         variant="contained"
         className={classes.btn}

@@ -19,6 +19,10 @@ const useStyles = makeStyles({
     backgroundColor: "#8e0000",
     color: "white",
   },
+  secondarybtn: {
+    backgroundColor: "white",
+    color: "#8e0000",
+  },
 });
 
 //Redux Mapping
@@ -107,7 +111,8 @@ function SignIn(props) {
                 </Grid>
               </Grid>
               <Grid item xs={12}>
-                <Button fullWidth id="SignInButton" variant="contained" onClick={() => {
+                <div className="space">
+                <Button fullWidth id="SignInButton" variant="contained" className={classes.secondarybtn} onClick={() => {
                       props.attemptSignIn(
                         props.usernameEntry,
                         props.passwordEntry
@@ -115,7 +120,9 @@ function SignIn(props) {
                     }}>
                   Sign in
                 </Button>
+                </div>
 
+                <div className="space">
                 <Button
                   //   color="primary"
                   id="createUser"
@@ -127,6 +134,7 @@ function SignIn(props) {
                 >
                   Create Account
                 </Button>
+                </div>
               </Grid>
               <Grid item xs={12}>
                 <hr></hr>
