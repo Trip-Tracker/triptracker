@@ -13,16 +13,19 @@ const useStyles = makeStyles({
   },
 });
 
+
+
 // const mapStateToProps = state => ({
 //   currentTrip: state.mainReducer.currentTrip,
 // });
 
 function IndividualTrip(props) {
   const classes = useStyles();
+
   
   return (
     <div className="graycard">
-      <SimpleMap/>
+      <SimpleMap location={props.location}/>
       {/* This was a trip to: {props.currentTrip.location} */}
       This was a trip to: {props.location}
       <br></br>
