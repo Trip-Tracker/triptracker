@@ -15,6 +15,11 @@ describe('React unit tests', () => {
     
     beforeAll(() => {wrapper = shallow(<IndividualTrip />)});
     
+    it('Renders one <SimpleMap> tags', () => {
+      // console.log("Shallow copy:", wrapper.debug());
+      expect(wrapper.find("SimpleMap")).toHaveLength(1);
+    });
+
     it('Renders two <Button> tags', () => {
       // console.log("Shallow copy:", wrapper.debug());
       expect(wrapper.find("WithStyles(ForwardRef(Button))")).toHaveLength(2);
