@@ -12,10 +12,6 @@ import {connect} from 'react-redux'
 import { Button, TextField, Grid, Container } from "@material-ui/core";
 import { makeStyles } from "@material-ui/core";
 
-
-
-
-
 //Material UI style hook
 const useStyles = makeStyles({
   btn: {
@@ -127,7 +123,7 @@ function SignIn(props) {
                   className={classes.btn}
                   //   onClick={this.createUserClick}
                 >
-                  New User
+                  Create Account
                 </Button>
               </Grid>
             </Grid>

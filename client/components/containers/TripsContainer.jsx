@@ -2,7 +2,7 @@ import React from "react";
 import { Button, TextField, Grid, Container } from "@material-ui/core";
 import { makeStyles } from "@material-ui/core";
 import {connect} from 'react-redux';
-import { updateTrip } from "../../actions/actions";
+import { updateTrip, createTrip } from "../../actions/actions";
 import * as types from "../../actions/actionTypes.js";
 
 const mapStateToProps = state => ({
@@ -13,7 +13,10 @@ const mapStateToProps = state => ({
 const mapDispatchToProps = dispatch => ({
   selectTrip: (trip) => {
     dispatch(updateTrip(trip));
-  }
+  },
+  createTrip: () => {
+    dispatch(createTrip());
+  },
 });
 
 const useStyles = makeStyles({
@@ -58,7 +61,15 @@ function TripsContainer(props) {
       <div className='tripsContainer'>
         {tripsToRender}
       </div>
-      <Button fullWidth variant="contained" className={classes.btn}>New Trip</Button>
+
+      <Button
+        fullWidth
+        variant="contained"
+        className={classes.btn}
+        onClick={() => props.createTrip()}
+      >
+        New Trip
+      </Button>
     </div>
   );
 }
