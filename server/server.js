@@ -18,7 +18,7 @@ app.use(express.urlencoded({ extended: true }));
 app.use("/build", express.static(path.join(__dirname, "../build")));
 // serve index.html on the route '/'
 app.get("/", (req, res) => {
-  // return res.status(200).sendFile(path.join(__dirname, "../index.html"));
+  return res.status(200).sendFile(path.join(__dirname, "../index.html"));
 });
 
 /*
@@ -38,7 +38,7 @@ app.post("/verifyUser", userController.verifyUser, tripController.getTrips, (req
 */
 
 app.post("/getTrips", tripController.getTrips, (req, res) => {
-  return res.json(res.locals.trips);
+  return res.status(200).json(res.locals.trips);
 })
 
 app.post("/newTrip", tripController.createTrip, tripController.getTrips, (req, res) => {
