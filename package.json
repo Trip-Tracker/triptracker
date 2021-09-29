@@ -27,6 +27,7 @@
     "concurrently": "^6.2.1",
     "cross-env": "^7.0.3",
     "express": "^4.17.1",
+    "file-loader": "^6.2.0",
     "google-map-react": "^2.1.10",
     "jest": "^27.2.3",
     "pg": "^8.7.1",

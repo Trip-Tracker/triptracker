@@ -42,3 +42,12 @@ html {
   overflow: scroll;
   margin-bottom: 10px;
 }
+/* .logo {
+  width: 200px;
+  height: 200px;
+} */
+.forgotPassword {
+  color: blue;
+  text-align: center;
+  margin-left: 125px;
+}

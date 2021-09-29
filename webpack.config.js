@@ -23,6 +23,14 @@ module.exports = {
         test: /\.css$/i, //style loader injects CSS into DOM
         use: ["style-loader", "css-loader"], //css loader interprets @import and url()
       },
+      {
+        test: /\.(png|jpe?g|gif)$/i,
+        use: [
+          {
+            loader: 'file-loader',
+          },
+        ]
+      },
     ],
   }, //closes module object
   devServer: {
