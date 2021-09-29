@@ -22,3 +22,10 @@ export const updatePasswordEntryAction = (entry) => {
     payload: entry,
   };
 };
+
+export const updateTrip = (entry) => {
+  return {
+    type: types.CHANGE_TRIP,
+    payload: entry,
+  };
+};

@@ -5,9 +5,10 @@ const initialState = {
   passwordEntry: '',
   userId: 1,
   userEmail: 'password',
-  isSignedIn: true,
+  isSignedIn: false,
   count: 0,
   tripsArray: [],
+  currentTrip: null
 };
 
 
@@ -40,6 +41,12 @@ const mainReducer = (state = initialState, action) => {
           tripsArray: action.payload.trips,
           isSignedIn: true,
         };
+      
+      case types.CHANGE_TRIP:
+        return {
+          ...state,
+          currentTrip: action.payload
+        }
 
     default:
       return state;
