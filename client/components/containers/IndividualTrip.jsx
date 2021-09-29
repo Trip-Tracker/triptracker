@@ -27,18 +27,21 @@ function IndividualTrip(props) {
     <div className="graycard">
       <SimpleMap location={props.location}/>
       {/* This was a trip to: {props.currentTrip.location} */}
-      This was a trip to: {props.location}
-      <br></br>
+      <p className='tripText'>{props.location}: {props.date}</p>
       {/* This trip was on: {props.currentTrip.date} */}
-      This trip was on: {props.date}
+
+      <div className='buttonContainer'>
       <Button       
         id="edittrip"
         fullWidth
         variant="contained"
         className={classes.btn}
       >
+       
         Edit Trip
       </Button>
+      </div>
+      <div className='buttonContainer'>
       <Button       
         id="edittrip"
         fullWidth
@@ -47,6 +50,7 @@ function IndividualTrip(props) {
       >
         Delete Trip
       </Button>
+      </div>
     </div>
   );
 }

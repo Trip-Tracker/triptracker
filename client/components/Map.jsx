@@ -49,7 +49,9 @@ class SimpleMap extends Component {
           defaultZoom={this.state.zoom}
         >
           <Flag
+          style={{fill: "red"}}
           lat={this.state.center.lat}
+          lng={this.state.center.lng}
           >Can text go here? </Flag>
         </GoogleMapReact>
       </div>
