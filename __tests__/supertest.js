@@ -67,77 +67,28 @@ describe('Route Integration', () => {
       it('When we make a post request with user_id it should return an array of trips', () => {
         return request(server)
           .post('/getTrips')
-          .send({ userID: 1 })
+          .send({ userID: 2 })
           .expect('Content-Type', 'application/json; charset=utf-8')
-          .expect([{ _id: 16, user_id: 1, location: 'somewhere', date: 'today' },
-          {
-            _id: 17,
-            user_id: 1,
-            location: 'Trip 2 motha fucka',
-            date: 'today'
-          },
-          {
-            _id: 18,
-            user_id: 1,
-            location: 'Trip 2 never trust a hoe',
-            date: 'today'
-          },
-          { _id: 19, user_id: 1, location: 'Trip 4', date: 'today' },
-          { _id: 20, user_id: 1, location: 'Trip 5', date: 'today' },
-          { _id: 21, user_id: 1, location: 'Trip 6', date: 'today' },
-          { _id: 22, user_id: 1, location: 'Trip 7', date: 'today' },
-          { _id: 23, user_id: 1, location: 'Trip 8', date: 'today' }])
+          .expect(200)
+          .expect([])
       });
     });
   });
 
-  // describe('/login', () => {
-  //   describe('POST', () => {
+  describe('/getLocations', () => {
+    describe('POST', () => {
 
-  //     it('When we send INVALID user info - response body should hold an err object with specific properties', () => {
-  //       return request(server)
-  //         .post('/login')
-  //         .send({ username: 'nonexistingusername', password: 'sess' })
-  //         .expect('Content-Type', 'application/json; charset=utf-8')
-  //         .expect({
-  //           log: 'Unknown Middleware error',
-  //           status: 400,
-  //           message: "userController.verifyUser: Error: Error: It's either your password is wrong or your user name is wrong"
-  //         })
-  //     });
-  //   });
-  // });
-
-
-  // describe('/new', () => {
-  //   describe('POST', () => {
-
-  //     it('When we send a unique Username with pass - it should properly create the document and send it back in JSON', () => {
-  //       return request(server)
-  //         .post('/new')
-  //         .send({ username: 'session', password: 'session' })
-  //         .expect('Content-Type', 'application/json; charset=utf-8')
-  //     });
-  //   });
-  // });
-
-  // describe('/new', () => {
-  //   describe('POST', () => {
-
-  //     it('When we send a Non-Unique Username we receive a not very descriptive error - with a status of 400', () => {
-  //       return request(server)
-  //         .post('/new')
-  //         .send({ username: 'sess', password: 'session' })
-  //         .expect('Content-Type', 'application/json; charset=utf-8')
-  //         .expect({
-  //           log: 'Unknown Middleware error',
-  //           status: 400,
-  //           message: 'userController.createUser: Error: ValidationError: email: Path `email` is required.'
-  //         })
-  //     });
-  //   });
-  // });
-
-
+      it('When we send INVALID user info - response body should hold an err object with specific properties', () => {
+        return request(server)
+          .post('/getLocations')
+          .send({ tripID: 5 })
+          .expect('Content-Type', 'application/json; charset=utf-8')
+          .expect([
+            { _id: 1, trip_id: 5, longitude: 100, latitude: 100 },
+            { _id: 2, trip_id: 5, longitude: 5000, latitude: 1000 }
+          ])
+      });
+    });
+  });
 });
 
