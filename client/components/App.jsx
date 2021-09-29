@@ -55,7 +55,10 @@ function App(props) {
   return (
     <div>
       <Navigation page={props.currentTrip.location}/>
-      <IndividualTrip/>
+      <IndividualTrip
+        location = {props.currentTrip.location} // comment out if reverting to Redux
+        date = {props.currentTrip.date} // comment out if reverting to Redux
+      />
     </div>
   )
 

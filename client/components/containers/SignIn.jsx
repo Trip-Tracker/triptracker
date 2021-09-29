@@ -7,7 +7,7 @@ import {
 } from "../../actions/actions";
 import * as types from "../../actions/actionTypes.js";
 import {connect} from 'react-redux'
-import logo from '../../assets/logo.png'
+// import logo from '../../assets/logo.png'
 
 //MaterialUI Imports
 import { Button, TextField, Grid, Container } from "@material-ui/core";
@@ -71,7 +71,7 @@ function SignIn(props) {
   return (
    
       <div className="graycard">
-        <img src={logo} className='logo'></img>
+        {/* <img src={logo} className='logo'></img> */}
         <Container maxWidth="xs">
           <form>
             <Grid container spacing={3}>
@@ -141,4 +141,4 @@ function SignIn(props) {
 }
 
 // export default SignIn;
-export default connect(mapStateToProps,mapDispatchToProps)(SignIn)
+export default connect(mapStateToProps,mapDispatchToProps)(SignIn);
