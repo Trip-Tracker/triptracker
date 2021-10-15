@@ -111,4 +111,4 @@ Distributed under the MIT License. See `LICENSE` for more information.
 <!-- CONTACT -->
 ## Contact
 
-Project Link: [https://github.com/Trip-Tracker/triptracker.git](https://github.com/your_username/repo_name)
+Project Link: [https://github.com/Trip-Tracker/triptracker.git](https://github.com/Trip-Tracker/triptracker.git)
