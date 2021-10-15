@@ -1,10 +1,8 @@
-# triptracker
+# TripTracker
 <!-- PROJECT LOGO -->
 <br />
 <p align="center">
-  <a href="https://github.com/Trip-Tracker/triptracker">
-    <img src="https://imgur.com/uLkEsPI.png" alt="Logo" width="550" height="400">
-  </a>
+  <img src="./client/assets/logo.png" alt="Logo">
 
   <h3 align="center">TripTracker</h3>
 
@@ -14,29 +12,28 @@
   <summary>Table of Contents</summary>
   <ol>
     <li>
-      <a href="#about-the-project">About TripTracker</a>
+      <a href="#about-triptracker">About TripTracker</a>
       <ul>
-        <li><a href="#built-with">Built and Tested With</a></li>
+        <li><a href="#built-and-tested-with">Built and Tested With</a></li>
+        <li><a href="#prerequisites">Prerequisites</a></li>
       </ul>
     </li>
     <li>
       <a href="#getting-started">Getting Started</a>
       <ul>
-        <li><a href="#prerequisites">Prerequisites</a></li>
         <li><a href="#installation">Installation</a></li>
       </ul>
     </li>
-    
-    
- 
-    
+    <li><a href="#contributing">Contributing</a></li>
+    <li><a href="#license">License</a></li>
+    <li><a href="#contact">Contact</a></li>
   </ol>
 </details>
 
 
 
 <!-- ABOUT THE PROJECT -->
-## About The Project
+## About TripTracker
 
 Have you recently moved? Are you traveling to a new area? Do you find yourself being constantly disoriented or needing help remembering where important locations are as? There are too many locations for the human mind to keep track of. Enter TripTacker! Our prototype application was designed with a mobile first mindset and allows users to automatically save their favorite places within their desired local.
 
