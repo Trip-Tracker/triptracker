@@ -3,9 +3,7 @@
 <br />
 <p align="center">
   <img src="./client/assets/logo.png" alt="Logo">
-
-  <h3 align="center">TripTracker</h3>
-
+<!--   <h3 align="center">TripTracker</h3> -->
 
 <!-- TABLE OF CONTENTS -->
 <details open="open">
